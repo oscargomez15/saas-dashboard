@@ -1,0 +1,73 @@
+@import '../Styles/Variables.scss';
+
+.searchbar-container{
+    display: flex;
+    align-items: center;
+    background-color: $primaryColor;
+    padding: 2rem 0;
+    border-bottom: 2px $secondaryColor solid;
+    gap: 1rem;
+}
+
+.searchbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height:5vh;
+
+    .icon{
+        color: $secondaryColor;
+        height: 3rem;
+        border: 2px solid $secondaryColor;
+        border-radius: $borderRadius 0 0 $borderRadius;
+        border-right: none;
+        outline: none;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg{
+            height: 75%;
+            padding-left: 1rem;
+            color: $secondaryColor;
+        }
+    }
+}
+
+.searchbar input{
+    height: 3rem;
+    font-size: $titleFontSize;
+    font-family: $fontTitle;
+    padding-left: 1rem;
+    width: 45vw;
+
+    color: $fontActiveColor;
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+
+    border-radius: 0 $borderRadius $borderRadius 0;
+    border: solid $secondaryColor 2px;
+    border-left: none;
+}
+
+.notifications{
+    appearance: none;
+    outline: none;
+    border: none;
+    color: $fontActiveColor;
+    width: 50px;
+    height: 50px;
+    background-color: $secondaryColor;
+    border-radius: $borderRadius;
+    transition: all .3s ease-in-out;
+    svg{
+        height: 45%;
+    }
+}
+
+.notifications:hover{
+    @include buttonStyle(#464646);
+}

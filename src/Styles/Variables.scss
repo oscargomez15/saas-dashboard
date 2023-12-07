@@ -1,0 +1,40 @@
+
+$primaryColor: black;
+$secondaryColor: #212121;
+$thirdColor: #4d4d4d;
+
+$fontColor: #A8A8A8;
+$fontActiveColor: white;
+
+$titleFontSize: 24px;
+$paragraphFontSize:16px;
+
+$buttonColor: #0068b3;
+$borderRadius: 15px;
+
+$fontTitle: Karla, sans-serif;
+$fontContent: Inter, sans-serif;
+
+@mixin resetStyle{
+    outline: none;
+    appearance: none;
+    border: none;
+}
+
+@mixin buttonStyle($backgroundColor){
+    transition: all .2s;
+    cursor: pointer;
+    background-color: $backgroundColor;
+    color: white;
+}
+
+@mixin whiteboxStyle($top){
+    position: absolute;
+    border-radius: 25px;
+    height: 250px;
+    width: 250px;
+    rotate: 45deg;
+    right: -100px;
+    top: $top;
+    background-color: rgba(255,255,255,0.3);
+}

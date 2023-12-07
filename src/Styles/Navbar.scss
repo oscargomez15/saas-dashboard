@@ -1,0 +1,135 @@
+@import './Variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&display=swap');
+
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    display: flex;
+
+}
+nav{
+    padding-top: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $secondaryColor;
+    min-height: 100vh;
+    width: 15vw;
+    z-index: 99;
+    img{
+        width: 200px;
+        margin-top: 4rem;
+    }
+}
+
+ul{
+    list-style: none;
+}
+
+ul li{
+    display: flex;
+    align-items: center;
+
+    font-family: $fontTitle;
+    margin-top: 4rem;
+    color: $fontColor;
+    margin: 4rem auto 0 auto;
+    a{
+        display: block;
+        text-decoration: none;
+        color: $fontColor;
+        font-size: 20px;
+        svg{
+            margin-right: 2rem;
+            width: 30px;
+        }
+    }
+}
+
+ul li a:hover{
+    color: $fontActiveColor;
+}
+
+.notif{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    color: white;
+    @include buttonStyle(rgb(197, 0, 0));
+    margin-left: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 1px;
+    transition: all .2s;
+}
+
+.notif:hover{
+    background-color: rgb(255, 22, 22)
+}
+#tooltip{
+    position: relative;
+}
+
+.tooltipText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    bottom: -300%;
+    transform: translateX(-50%);
+    background-color: $thirdColor;
+    color: white;
+    white-space: nowrap;
+    padding: 10px 15px;
+    font-size: $paragraphFontSize;
+    border-radius: 7px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.tooltipText::before{
+    content: "";
+    position: absolute;
+    left: 42%;
+    bottom: 100%;
+    transform: translateX(-50%);
+    rotate: 180deg;
+    border: 15px solid;
+    border-color: $thirdColor transparent transparent transparent ;
+}
+
+.tooltip-btn{
+    @include resetStyle;
+    @include buttonStyle($buttonColor);
+    color: white;
+    padding: .5rem 2rem;
+    width: 50%;
+    font-weight: bold;
+    font-family: $fontContent;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.tooltip-btn:hover{
+    background-color: #0189eb;
+}
+
+#tooltip:hover .tooltipText{
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+}
+
+ul li:last-of-type{
+    margin-bottom: 2rem;
+}

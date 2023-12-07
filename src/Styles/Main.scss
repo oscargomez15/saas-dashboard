@@ -1,0 +1,10 @@
+@import '../Styles/Variables.scss';
+
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: $primaryColor;
+    height: 100vh;
+    width: 70vw;
+}

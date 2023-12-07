@@ -1,0 +1,19 @@
+@import './Variables.scss';
+
+.timeline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $primaryColor;
+    height: 100%;
+    width: 100%;
+    color: $fontActiveColor;
+    font-family: $fontTitle;
+    border-top: 1px solid $secondaryColor;
+    padding: 2rem 0;
+}
+
+.timeline-grid{
+    display: grid;
+}

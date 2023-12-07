@@ -1,0 +1,70 @@
+@import "./Variables.scss";
+
+.card{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    color: $fontActiveColor;
+    font-family: $fontTitle;
+    font-size: $titleFontSize;
+
+    padding: 0 0 2rem 2rem;
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;
+    transition: all .6s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.slideOutAnimation{
+    animation: slideOut 3s;
+}
+
+.slideInAnimation{
+    animation: slideOut 3s reverse;
+}
+
+.card:hover{
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.card:hover .whitebox,
+.card:hover .whitebox-behind{
+    translate: 300px;
+    rotate: 90deg;
+}
+
+.whitebox{
+    @include whiteboxStyle(-20%);
+    transition: all 1s;
+}
+
+.whitebox-behind{
+    @include whiteboxStyle(-5%);
+    transition: all 1s;
+}
+
+
+.orange{
+    background: linear-gradient(180deg, #FF9344 0%, #FF7B43 100%);
+}
+.purple{
+    background: linear-gradient(180deg, #CE44FF 0%, #FF43D6 100%);
+}
+.blue{
+    background: linear-gradient(180deg, #5E44FF 0%, #43C7FF 100%);
+}
+
+@keyframes slideOut {
+    from{
+        right: -100px;
+        rotate: 45deg;
+    }
+    to{
+        right: -300px;
+        rotate: 90deg;
+    }
+}

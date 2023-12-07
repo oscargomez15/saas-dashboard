@@ -1,0 +1,46 @@
+@import './Variables.scss';
+
+aside{
+    background-color: black;
+    height: 100vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px $secondaryColor solid;
+    color: white;
+    font-family: $fontTitle;
+}
+
+.team-members{
+    width: fit-content;
+    padding: 2rem;
+}
+
+.team-members-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.team-members-title a{
+    color: $buttonColor;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+.team-members-title a:hover{
+    color:#52b7ff;
+}
+.picture-container{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    width: fit-content;
+}
+.team-member-picture{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
