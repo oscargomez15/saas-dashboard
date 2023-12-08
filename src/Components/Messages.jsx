@@ -27,8 +27,8 @@ export const Messages = () => {
   }]
   return (
     <section className='messages-container'>
+        <h2>Recent Messages</h2>
         <div className="messages">
-          <h2>Recent Messages</h2>
           {messagesContent.map(item => {
             return (
           <div className="messagebubble">

@@ -1,7 +1,7 @@
 aside {
   background-color: black;
   height: 100vh;
-  width: 30vw;
+  width: 20vw;
   display: flex;
   flex-direction: column;
   border-left: 1px #212121 solid;
@@ -46,4 +46,10 @@ aside {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
+  transition: all 0.5s;
+}
+
+.team-member-picture:hover {
+  scale: 1.1;
+  cursor: pointer;
 }/*# sourceMappingURL=Sidebar.css.map */

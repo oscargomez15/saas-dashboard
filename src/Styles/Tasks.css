@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.task-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.task-wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
+}
+
+.task-title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.addTask {
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  background: #212121;
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.addTask:hover {
+  background-color: #4d4d4d;
+  cursor: pointer;
+}
+
+.taskbubble {
+  background-color: #212121;
+  border-radius: 15px;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.taskdescription {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid white;
+  padding-bottom: 0.5rem;
+}
+
+.taskdescription input {
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  border: 3px white solid;
+  border-radius: 5px;
+  height: 25px;
+  width: 25px;
+  transition: all 0.2s;
+}
+
+.taskdescription input:checked {
+  background-color: rgb(0, 151, 0);
+}
+
+.taskdescription input:hover {
+  cursor: pointer;
+  background-color: rgb(160, 160, 160);
+}
+
+.tasktime {
+  font-weight: 200;
+  padding-top: 0.5rem;
+}/*# sourceMappingURL=Tasks.css.map */

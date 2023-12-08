@@ -1,5 +1,7 @@
 import React from 'react'
 import {Messages} from "./Messages"
+import { Tasks } from './Tasks'
+
 import '../Styles/Sidebar.css'
 import joshua from "../Assets/joshua.jpg"
 import sarah from "../Assets/sarah.jpg"
@@ -24,6 +26,8 @@ export const Sidebar = () => {
             })}
           </div>
         </div>
+
+        <Tasks/>
     </aside>
   )
 }
